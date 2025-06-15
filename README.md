@@ -10,3 +10,6 @@ For the second task, I created a tribute page dedicated to Dr. B. R. Ambedkar. T
 
 Task 3: Todo Web App
 The third task involved building a todo web application using HTML, CSS, and JavaScript. The todo app allows users to add tasks, mark them as complete, and delete them when necessary. It provides a simple and intuitive interface for managing and organizing tasks effectively.
+
+Task 4: basic authentication page
+The fourth task involved building a authentication web application using HTML, CSS, and JavaScript. The authentication app allows users to add details of them. It provides a simple and intuitive interface for managing and organizing tasks.
