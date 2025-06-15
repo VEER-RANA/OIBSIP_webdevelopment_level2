@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign In / Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="frame">
+      <div class="nav">
+        <ul class="links">
+          <li class="signin-active"><a class="btn" id="signInBtn">Sign in</a></li>
+          <li class="signup-inactive"><a class="btn" id="signUpBtn">Sign up</a></li>
+        </ul>
+      </div>
+
+      <!-- Sign In Form -->
+      <form class="form form-signin active" id="signInForm">
+        <label>Username</label>
+        <input class="form-styling" type="text" placeholder="Your username" />
+        <label>Password</label>
+        <input class="form-styling" type="password" placeholder="Your password" />
+        <button type="button" class="btn-action">Sign In</button>
+      </form>
+
+      <!-- Sign Up Form -->
+      <form class="form form-signup" id="signUpForm">
+        <label>Full Name</label>
+        <input class="form-styling" type="text" placeholder="Your full name" />
+        <label>Email</label>
+        <input class="form-styling" type="email" placeholder="Your email" />
+        <label>Password</label>
+        <input class="form-styling" type="password" placeholder="Your password" />
+        <label>Confirm Password</label>
+        <input class="form-styling" type="password" placeholder="Confirm password" />
+        <button type="button" class="btn-action">Sign Up</button>
+      </form>
+
+      <div class="forgot">
+        <a href="#">Forgot your password?</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signInBtn = document.getElementById('signInBtn');
+    const signUpBtn = document.getElementById('signUpBtn');
+    const signInForm = document.getElementById('signInForm');
+    const signUpForm = document.getElementById('signUpForm');
+
+    signInBtn.onclick = () => {
+      signInForm.classList.add('active');
+      signUpForm.classList.remove('active');
+    };
+
+    signUpBtn.onclick = () => {
+      signUpForm.classList.add('active');
+      signInForm.classList.remove('active');
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic ToDo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <div class="todo-app">
+      <h2>ToDo List <img src="https://cdn-icons-png.flaticon.com/512/1011/1011863.png" alt="Logo" /></h2>
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Add a task..." />
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="list-container"></ul>
+    </div>
+  </main>
+
+  <script>
+    const inputBox = document.getElementById("input-box");
+    const listContainer = document.getElementById("list-container");
+
+    function addTask() {
+      if (inputBox.value.trim() === "") {
+        alert("Please write a task.");
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = inputBox.value;
+
+      li.addEventListener("click", () => {
+        li.classList.toggle("checked");
+      });
+
+      const span = document.createElement("span");
+      span.innerHTML = "&times;";
+      span.addEventListener("click", () => {
+        li.remove();
+      });
+
+      li.appendChild(span);
+      listContainer.appendChild(li);
+      inputBox.value = "";
+    }
+  </script>
+</body>
+
+</html>
